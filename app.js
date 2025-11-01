@@ -18,7 +18,7 @@ app.use("/prestasi", prestasiRoutes);
 
 // Root endpoint
 app.get("/", (req, res) => {
-  res.send("Server Prestasi berjalan docker!");
+  res.send("Server Prestasi berjalan!");
 });
 
 // Jalankan server
