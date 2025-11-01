@@ -1,7 +1,7 @@
 let mysql = require("mysql2");
 
 let db = mysql.createPool({
-  host: "localhost",
+  host: "mysql-db",
   user: "root",
   password: "",
   database: "db_tugas",
