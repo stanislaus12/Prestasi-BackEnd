@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/prestasi", prestasiRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Server Prestasi berjalan stan!");
+  res.send("Server Prestasi berjalan stanislaus!");
 });
 
 app.listen(PORT, () => {
