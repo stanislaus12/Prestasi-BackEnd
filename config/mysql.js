@@ -14,7 +14,7 @@ let db = mysql.createPool({
 });
 
 db.on("connection", function (connection) {
-  console.log("DB Connection established");
+  // console.log("DB Connection established");
 
   connection.on("error", function (err) {
     console.error(new Date(), "MySQL error", err.code);
@@ -22,6 +22,15 @@ db.on("connection", function (connection) {
   connection.on("close", function (err) {
     console.error(new Date(), "MySQL close", err);
   });
+});
+
+db.getConnection((err, connection) => {
+  if (err) {
+    console.error("MySQL connection failed:", err.message);
+  } else {
+    console.log("MySQL connected!");
+    connection.release();
+  }
 });
 
 module.exports = db;
